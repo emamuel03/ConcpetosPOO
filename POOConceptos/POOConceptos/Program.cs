@@ -5,16 +5,28 @@ using System;
 
 Console.WriteLine("Hello World!");
 
-Date date1 = new Date(2022, 2, 11);
-
-try
+Employee employee1 = new SalaryEmployee()
 {
-    Console.WriteLine(new Date(2022, 2, 11));
-    Console.WriteLine(new Date(2022, 2, 11));
-    Console.WriteLine(new Date(2022, 2, 29));
-}
-catch (Exception error)
-{
+    Id = 10,
+    FirstName = "Sandra",
+    LastName = "Morales",
+    BirthDate = new Date(1990,10,01),
+    HiringDate = new Date(2022,01,01),
+    IsActive = true,
+    Salary = 75456.45M
+};
 
-    Console.WriteLine(error.Message);
-}
+Employee employee2 = new CommissionEmployee()
+{
+    Id = 20,
+    FirstName = "Patricia",
+    LastName = "Martinez",
+    BirthDate = new Date(1992, 01, 23),
+    HiringDate = new Date(2022, 01, 01),
+    IsActive = true,
+    Sales = 1000000M,
+    CommissionPercentaje = 0.03F
+    
+};
+Console.WriteLine(employee1);
+Console.WriteLine(employee2);
